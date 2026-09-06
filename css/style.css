@@ -1,0 +1,132 @@
+/* CHARLOTE'S PERSONAL SITE
+   Main accent: #F04E98
+*/
+:root{
+  --pink:#F04E98;
+  --pink-light:#FAD4E5;
+  --pink-soft:#FFF0F6;
+  --cream:#FFFDF9;
+  --ink:#292229;
+  --muted:#756B72;
+  --line:#E8DDE3;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;font-size:15px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.site-shell{max-width:1240px;margin:auto;padding:0 42px}
+.nav{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-family:"Playfair Display",serif;font-size:34px;font-weight:600;font-style:italic}
+.logo span{color:var(--pink)}
+.nav nav{display:flex;gap:34px;font-size:13px;text-transform:lowercase;letter-spacing:.04em}
+.nav nav a{position:relative;padding:8px 0}
+.nav nav a:after{content:"";position:absolute;left:0;bottom:1px;width:0;height:1px;background:var(--pink);transition:.25s}
+.nav nav a:hover:after,.nav nav a.active:after{width:100%}
+.nav-dot{width:34px;height:34px;border:1px solid var(--pink);border-radius:50%;display:grid;place-items:center;color:var(--pink);font-size:13px;transition:.25s}
+.nav-dot:hover{background:var(--pink);color:white;transform:rotate(12deg)}
+
+.home{min-height:calc(100vh - 150px);position:relative;padding:13vh 8% 9vh;display:flex;flex-direction:column;justify-content:center}
+.hero{max-width:720px;position:relative;z-index:1}
+.eyebrow,.section-kicker,.post-meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);font-weight:600}
+.hero h1,.page-heading h1{font-family:"Playfair Display",serif;font-size:clamp(60px,8vw,108px);line-height:.94;font-weight:500;letter-spacing:-.045em;margin:20px 0 28px}
+h1 em,h2 em{font-style:italic;color:var(--pink)}
+.hero-copy{max-width:560px;color:var(--muted);font-size:17px;line-height:1.8}
+.hero-links{display:flex;align-items:center;gap:28px;margin-top:35px}
+.pill{background:var(--pink);color:white;padding:13px 20px;border-radius:999px;font-size:12px;box-shadow:0 8px 22px rgba(240,78,152,.16);transition:.25s}
+.pill:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(240,78,152,.24)}
+.pill span{margin-left:10px}
+.text-link{font-size:12px;border-bottom:1px solid var(--ink);padding-bottom:3px;transition:.2s}
+.text-link:hover{color:var(--pink);border-color:var(--pink)}
+.home-note{position:absolute;font-size:11px;color:var(--muted);line-height:1.5}
+.home-note strong{color:var(--ink);font-weight:600}
+.note-one{right:10%;top:24%;transform:rotate(4deg);padding:13px;background:var(--pink-soft);border-left:2px solid var(--pink)}
+.note-two{left:4%;top:23%;transform:rotate(-8deg);color:var(--pink)}
+.scrapbook-stamp{position:absolute;right:8%;bottom:18%;font-family:"Playfair Display",serif;font-style:italic;text-align:center;transform:rotate(-7deg);font-size:13px;color:var(--muted)}
+.scrapbook-stamp span{font-size:17px;color:var(--pink)}
+.home-lower{display:grid;grid-template-columns:1fr 2fr;gap:60px;margin-top:15vh;padding-top:45px;border-top:1px solid var(--line)}
+.home-lower h2,.work-section h2{font-family:"Playfair Display",serif;font-size:38px;line-height:1.1;font-weight:500;margin:10px 0}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mini-card{min-height:150px;padding:20px;background:var(--white);border:1px solid var(--line);transition:.25s}
+.mini-card:hover{transform:translateY(-5px);border-color:var(--pink-light)}
+.mini-card span{font-size:10px;color:var(--pink)}
+.mini-card strong{display:block;font-family:"Playfair Display",serif;font-size:22px;font-weight:500;margin-top:24px}
+.mini-card p{font-size:11px;color:var(--muted);margin:3px 0}
+
+.inner-page{padding:11vh 8% 10vh}
+.page-heading{max-width:760px;margin-bottom:100px}
+.page-heading h1{font-size:clamp(58px,7vw,92px);margin-bottom:28px}
+.page-heading>p:last-child{max-width:520px;color:var(--muted);font-size:16px}
+.about-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:90px;align-items:center;padding-bottom:120px}
+.about-note{background:var(--pink-soft);padding:42px;transform:rotate(-2deg);box-shadow:8px 10px 0 var(--pink-light)}
+.about-note span{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--pink)}
+.about-note p{font-family:"Playfair Display",serif;font-size:30px;line-height:1.25;margin:25px 0}
+.about-note small{font-size:11px;color:var(--muted)}
+.about-text{max-width:540px;color:var(--muted);font-size:16px}
+.about-text p+p{margin-top:28px}
+.work-section{border-top:1px solid var(--line);padding-top:70px}
+.section-row{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}
+.tiny-note{font-size:11px;color:var(--muted)}
+.work-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.work-card{min-height:330px;padding:28px;background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;transition:.25s}
+.work-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(41,34,41,.06)}
+.work-card.tall{background:var(--pink-soft);min-height:390px}
+.work-card>span{font-size:10px;color:var(--pink)}
+.work-card h3{font-family:"Playfair Display",serif;font-size:35px;font-weight:500;line-height:1.05;margin:auto 0 15px}
+.work-card p{font-size:12px;color:var(--muted);max-width:240px}
+.work-card a{font-size:11px;color:var(--pink);margin-top:18px}
+
+.writing-heading{margin-bottom:75px}
+.posts{max-width:1000px}
+.post{border:1px solid var(--line);background:var(--white)}
+.post.featured{display:grid;grid-template-columns:1fr 1.2fr;min-height:390px}
+.post-image{background:var(--pink-soft);display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:65px;color:var(--pink)}
+.post-content{padding:50px;display:flex;flex-direction:column;justify-content:center}
+.post-content h2{font-family:"Playfair Display",serif;font-size:42px;line-height:1.08;font-weight:500;margin:12px 0 20px}
+.post-content p:not(.post-meta),.post.small p:not(.post-meta){color:var(--muted);font-size:13px;max-width:510px}
+.post-content .text-link{align-self:flex-start;margin-top:22px}
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.post.small{padding:28px;min-height:280px;display:flex;flex-direction:column}
+.post.small h2{font-family:"Playfair Display",serif;font-size:28px;line-height:1.1;font-weight:500;margin:25px 0 10px}
+.post.small .text-link{align-self:flex-start;margin-top:auto}
+.post.offset{transform:translateY(35px)}
+
+.footer{border-top:1px solid var(--line);padding:25px 0 35px;display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:.04em}
+
+@media(max-width:800px){
+  .site-shell{padding:0 20px}
+  .nav{height:76px}
+  .nav nav{gap:18px;font-size:12px}
+  .nav-dot{width:30px;height:30px}
+  .home{padding:13vh 4% 8vh;min-height:auto}
+  .hero h1{font-size:clamp(55px,16vw,82px)}
+  .hero-copy{font-size:15px}
+  .home-note,.scrapbook-stamp{display:none}
+  .home-lower{grid-template-columns:1fr;gap:25px;margin-top:13vh}
+  .mini-grid{grid-template-columns:1fr}
+  .mini-card{min-height:125px}
+  .mini-card strong{margin-top:16px}
+  .inner-page{padding:10vh 4% 9vh}
+  .page-heading{margin-bottom:65px}
+  .page-heading h1{font-size:clamp(55px,15vw,80px)}
+  .about-layout{grid-template-columns:1fr;gap:55px;padding-bottom:80px}
+  .about-note{padding:32px}
+  .about-note p{font-size:26px}
+  .work-grid{grid-template-columns:1fr}
+  .work-card,.work-card.tall{min-height:300px}
+  .section-row{display:block}
+  .tiny-note{display:block;margin-top:15px}
+  .post.featured{grid-template-columns:1fr;min-height:0}
+  .post-image{min-height:230px}
+  .post-content{padding:32px}
+  .post-content h2{font-size:34px}
+  .post-grid{grid-template-columns:1fr}
+  .post.offset{transform:none}
+  .post.small{min-height:250px}
+  .footer{font-size:9px}
+}
+@media(max-width:430px){
+  .nav nav{gap:13px}
+  .logo{font-size:30px}
+  .hero-links{flex-direction:column;align-items:flex-start;gap:20px}
+}
